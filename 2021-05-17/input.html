@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>요소(input, form, label)</title>
+    </head>
+    <body>
+        <form action="" method="GET">
+            <!-- form 요소
+                - 서버로 전송할 입력 값의 집합(ex, 로그인폼, 회원가입폼, 글쓰기폼.)
+                - action 속성 : 해당 form이 가지는 값들을 전송할 경로(생략시 현재 주소 이용)
+                - method 속성 : 해당 요청을 어떠한 방식으로 보낼 것인가. (get, post 둘중 하나)
+                
+            -->
+            <label>
+                <!-- label 요소
+                    - input과 input에 대한 설명을 가지는 요소를 묶는다. -->
+                <a hidden>이메일</a>
+                <!-- hidden 속성 
+                    - 요소를 숨김
+                    - 속성값 없음 -->
+                <input type="email" placeholder="email" autofocus>
+                <a hidden>비밀번호</a>
+                <input type="password" placeholder="password">
+            </label>
+            <br>
+
+            <!-- <input id="auto-sign" type="checkbox">
+            <label for="auto-sign">자동 로그인</label> -->
+
+            <label>
+                <input type="checkbox">
+                <a>자동 로그인</a>
+            </label>
+
+            <br>
+            <input type="submit" value="로그인">
+            <!-- input 요소
+                - 클라이언트로 부터 값을 넘기기 위해 사용하는 필드
+                - name 속성 : input의 이름
+                - autofocus : 페이지가 불러와진 후 포커스를 준다(활성화 한다). 속성 값은 없음. (실제로는 없는건 아니고 autofocus = "autofocus")
+                - checked : type이 checkbox이거나 radio일때 체크(선택)된 상태로 만든다. 속성값은 없음.
+                - disabled : 해당 input을 사용하지 못하게 한다. 속성 값은 없음.
+                - readonly : 해당 input을 사용할수는 있으나 값을 바꿀수는 없게 한다. 속성 값 없음.
+                - placeholder 속성 : input의 value가 비어있을때 표시할 힌트
+                - value 속성 : 해당 input의 값을 지정한다.
+                - maxlength/minlength : 해당 input 값의 최대/최소 길이를 지정한다. (type 이 number일때 작동하지 않음.)
+                - max/min :  해당 input값의 최대 : 최소 값을 지정한다.
+                - type 속성 :
+                    - submit : 버튼처럼 생김. form을 전송.(ex, 로그인 버튼, 회원가입 버튼, 글작성 버튼....)
+                    - email : 이메일 주소 입력란.
+                    - file : 파일 업로드 전용.
+                    - hidden : 숨김값.
+                    - number : 숫자 전용 입력란.
+                    - checkbox : 논리값(true/false) 전용.
+                    - password : 비밀번호(●처리) 입력란.
+                    - tel : 연락처 입력란. 
+                    - text : 일반 문자열 입력란.
+                    - radio : name 속성 값이 같은 radio input들 중 하나만 선택하게 할 때 이용한다.
+                - [Optional] pattern 속성 : 해당 input 값에 대한 정규식을 만든다.-->
+        </form>
+        <a>이메일을 잊으셨나요?</a>
+        <a href="#">이메일 찾기</a>
+        <br>
+        <a>비밀번호를 잊으셨나요?</a>
+        <a href="#">비밀번호 찾기</a>
+        <br>
+        <a>계정이 아직 없으신가요?</a>
+        <a href="#">회원가입</a>
+
+        <form>
+            <label>
+                <a hidden>성명</a>
+                <input type="text" placeholder="성명">
+            </label>
+            <br>
+            <label>
+                <a hidden>연락처</a>
+                <input type="tel" placeholder="010-xxxx-xxxx">
+                <br>
+                <input name="telecom" type="radio"><a>SKT</a>
+                <input name="telecom" type="radio"><a>KT</a>
+                <input name="telecom" type="radio"><a>LG U+</a>
+                <br>
+                <input name="phoneNumber" type="radio"><a>010</a>
+                <input name="phoneNumber" type="radio"><a>070</a>
+                <input name="phoneNumber" type="radio"><a>080</a>
+                <br>
+                <select>
+                    <option>SKT</option>
+                    <option>KT</option>
+                    <option>LG U+</option>
+                </select>
+                <select>
+                    <option>010</option>
+                    <option>070</option>
+                    <option>080</option>
+                </select>
+                <input placeholder="0000" type="number">
+                <a>-</a>
+                <input placeholder="0000" type="number">
+            </label>
+            <br>
+            <textarea></textarea>
+        </form>
+    </body>
+</html>

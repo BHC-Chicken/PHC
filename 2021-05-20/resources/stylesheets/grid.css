@@ -1,0 +1,26 @@
+body > div.container {
+    display: grid;
+    /*
+    vh : viewport height
+        - 스크롤바가 차지하는 공간을 고려하지 않은 브라우저 렌더 부분 높이
+    vw : viewport width
+        - 스크롤바가 차지하는 공간을 고려하지 않은 브라우저 렌더 부분 너비
+    */
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* == repeat (4, 1fr)*/
+    /* 1 : 1 : 1 : 1*/
+    grid-template-rows: 1fr 1fr;
+    /* 1 : 1 */
+    /* fr : fraction (ratio) 비율 */
+}
+
+body>div.container>div {
+    background-color: lightgreen;
+}
+
+body > div.container > div.big {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}

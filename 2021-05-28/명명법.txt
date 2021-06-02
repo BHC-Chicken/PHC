@@ -1,0 +1,9 @@
+Pascal Case : PascalCase, ExampleName
+
+Camel Case : camelCase, exampleName
+
+Snake Case : snake_case, example_name
+
+Upper Snake Case : UPPER_SNAKE_CASE, EXAMPLE_NAME
+
+kebab Case(Spinal Case, Train Case) : kebab-case, example-case

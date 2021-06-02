@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>JS : FOR</title>
+  <script>
+    // for (let i=0; i<11; i++) {
+    //   console.log(i);
+    //   i++;
+    // }
+
+    let fruits =['Apple', 'Banana', 'Cherry', 'Grape', 'Orange', 'Strawberry', 'Blueberry'];
+    //
+
+    // for (let i=0;i<fruits.length; i++)  {
+    //   console.log(fruits[i]);
+    // }
+
+    // fruits.forEach(x=>{
+    //     console.log(x);
+    // });
+
+    // x.startsWith(a) : x 문자열이 a문자(열)로 시작하는지의 여부를 알려줌.
+    // x.endsWith(a) : x 문자열이 a문자(열)로 끝나는지의 여부를 알려줌.
+    // 둘다 a가 공백일 경우 true 를 반환함.
+
+    // for(let fruit of fruits) {
+    //     if (fruit.startsWith('B')) {
+    //         console.log(fruit);
+    //     }
+    // }
+
+    // fruits.filter(x=>x.startsWith('B')).forEach(x=>console.log(x));
+
+    // -filter 랑 forEach 를 이용해서 과일중에 길이가 5를 초과하는 과일만 로그에 출력
+    fruits.filter(x=>x.length>5).forEach(x=>console.log(x));
+    console.log("\n");
+    /* Lambda 람다 식(함수) : 화살표 함수 */
+
+    for(let fruit of fruits) {
+        if (fruit.length>5)
+            console.log(fruit);
+    }
+    console.log("\n");
+
+    for(let i=0; i<fruits.length; i++) {
+        if (fruits[i].length>5)
+            console.log(fruits[i]);
+    }
+
+  </script>
+</head>
+<body>
+</body>
+</html>

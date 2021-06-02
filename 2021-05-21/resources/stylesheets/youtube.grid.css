@@ -1,0 +1,94 @@
+h6 {
+    font: inherit;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+body {
+    margin: 0;
+}
+
+body>div.container {
+    width: 100%;
+    /*height: 100vh;*/
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1rem;
+}
+
+body>div.container>div.item>div.thumbnail {
+    position: relative;
+}
+
+body>div.container>div.item>div.thumbnail>img {
+    width: 100%;
+    height: 100%;
+}
+
+body>div.container>div.item>div.thumbnail >span.duration {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    background-color: #252525c0;
+    /*
+    배경 색상의 투명도만 주기
+        - rgba(r,g,b, 투명도) // 투명도는 0~1 소수점으로 조절
+        - #rrggbbaa
+    */
+    border-radius: 0.125rem;
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 0.12rem 0.2rem;
+    position: absolute;
+}
+
+body>div.container>div.item > div.detail > div.channel > img {
+    background-color: lightskyblue;
+    padding: 1.125rem;
+    border-radius: 50%;
+    margin: 0.3rem;
+}
+
+body>div.container>div.item>div.detail {
+    display: flex;
+    flex-direction: row;
+}
+
+body>div.container>div.item>div.detail>div.title {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-left: 0.5rem;
+}
+
+body>div.container>div.item>div.detail>div.title>span {
+    color: gray;
+    font-size: 0.85rem;
+}
+
+/* media 커리는 항상 가장 밑에 덜 중요한 것 순대로 있어야함. media 커리 내에서도 순서 중요*/
+@media (max-width: 62.5rem) {
+    /* 화면 가로크기가 50rem(1000px) 이하 일때에 적용할 선택자의 모음*/
+    body>div.container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 46.875rem) {
+    /* 화면 가로크기가 50rem(750px) 이하 일때에 적용할 선택자의 모음*/
+    body>div.container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 31.25rem) {
+    /* 화면 가로크기가 50rem(800px) 이하 일때에 적용할 선택자의 모음*/
+    body>div.container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        padding: 0;
+    }
+}

@@ -1,0 +1,98 @@
+body {
+    background-color: #10151a;
+    color: #fafcff;
+}
+body.preload * {
+    transition: none; !important;
+}
+body > div {
+    /* background-size :
+        - contain : 요소가 배경 이미지를 가리는 부분없이 표시하게 하려고 할 때 사용한다.
+        검은 띠가 생길 수 있음.
+        - cover : 요소의 빈 부분 없이 배경 이미지를 가장 작게 표시한다.
+     */
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    padding: 1.25rem;
+    position: fixed;
+}
+
+body > div> div {
+    top:-1rem;
+    background-color: #f0f5fa;
+    padding: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 250ms;
+    overflow: hidden;
+    opacity: 0;
+}
+
+body>div>div.visible {
+    top : 0;
+    opacity: 1;
+}
+
+body>div>div:hover {
+    transform: scale(1.025);
+    backdrop-filter: blur(0.25rem) brightness(0.5);
+    /* scale(x) 요소 확대/축소(축소 ~ 1 ~ 확대) */
+    /* blur(x) : x 만큼 흐리게한다. */
+    /* brightness(x) : 밝기 (어두움)0 ~ 1 ~ 2(밝음)*/
+    /* grayscale() : 흑백으로 만든다. 0 : no, 1 : yes */
+}
+
+body>div>div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+body>div>div>div {
+    top: 85%;
+    left : 85%;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    opacity: 0;
+    position: absolute;
+    transform: rotate(45deg);
+    transition-duration: 250ms;
+}
+body>div>div:hover>div {
+    top:75%;
+    left: 75%;
+    opacity: 1;
+}
+body>div>div>span:nth-child(2) {
+    top : 1.5rem;
+    left : 1.5rem;
+    color: #60656a;
+    font-size: 1.5rem;
+    position: absolute;
+}
+
+body>div>div>span:nth-child(3) {
+    width: 50%;
+    right: 1.5rem;
+    bottom: 0.5rem;
+    color: #a0a5aa;
+    font-size: 0.8rem;
+    opacity: 0;
+    position: absolute;
+    text-align: right;
+    transition-duration: 250ms;
+}
+
+body>div>div:hover>span:nth-child(3) {
+    bottom: 1.5rem;
+    opacity: 1;
+}

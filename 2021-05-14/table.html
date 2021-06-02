@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>요소(table)</title>
+    </head>
+    <body>
+        <!-- table 요소 
+            - 자료(데이터, 리소스 등)의 열거 외의 목적으로 이용해선 안된다.
+            - 페이지 레이아웃 잡겠다고 table쓰지 말라는 뜻.
+        -->
+        <table>
+            <caption>
+                <!-- caption 요소 : 해당 table의 제목 / 권장사항, 선택적 -->
+            </caption>
+            <thead>
+                <!-- thead요소 : 주로 tbody에 들어가는 내용의 범례
+                    -선택적 -->
+                <tr>
+                    <!-- 행 요소 : tr 
+                        열 요소 td-->
+                        <tr>
+                            <!-- 범례 쉘 요소 : th
+                                SEO 의미 있음.-->
+                            <th>Element</th>
+                            <th>Description</th>
+                        </tr>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- tbody 요소 : 테이블의 주요 내용이 들어감
+                    - 필수적 (표시할 내용이 없어도 "표시할 내용이 없다"고 알려줘야 됨.)-->
+                <tr>
+                    <th>
+                        <a href="#">&lt;base&gt;</a> 
+                        <!-- 요소 이외에 꺽쇠가 필요할 경우 &lt; &gt; 사용-->
+                    </th>
+                    <td>
+                        설명
+                    </td>
+                </tr>
+                <tr>
+                    <th rowspan="3" style="background-color: lightcoral;">
+                        <a href="#">&lt;head&gt;</a>
+                    </th>
+                    <td>
+                        설명
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        설명1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        설명2
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot style="background-color: lightblue;">
+                <!-- tfoot요소 : (주로) tbody에 들어가는 내용의 요약(summary), 개요
+                    - 선택적-->
+                <tr>
+                    <td colspan="2">
+                        <!-- 
+                            -colspan 속성 : 통합할 열의 수
+                            -rowspan 속성 : 통합할 행의 수
+                        -->
+                        요약
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

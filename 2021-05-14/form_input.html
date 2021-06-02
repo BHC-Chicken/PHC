@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>요소 (form 및 input)</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- form과 input요소는 Client가 입력하는 값을 서버로 전달하기 위해 사용한다.-->
+        <form>
+            <input name="ID" type="email" placeholder="ID" autofocus>
+            <!-- input 요소 : 클라이언트로 부터 값을 받기 위해 사용
+                -autofocus 속성 : 페이지 로드 후 해당 input에 포커스(focus)를 준다.
+                단, 속성 값을 가지지 않는다.
+                - disabled 속성 : 해당 input을 사용하지 못하게 한다. 단, 속성값을 가지지 않는다.
+                - name 속성 : 서버사이드로 값을 넘길 키
+                - maxlength 속성 : 해당 input의 value의 최대 길이
+                - pattern 속성 : 해당 input 값에 대한 정규식 (Regular Expression)
+                - type 속성 : 해당 input이 어떤 input인가
+                - value 속성 : 해당 input의 값
+                - placeholder 속성 : 해당 input의 value가 비었을때 보여줄 힌트
+                - MDN : https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input
+            -->
+            <input name="pw" type="password" placeholder="PASSWORD">
+            <input type="submit" value="로그인">
+        </form>
+    </body>
+</html>

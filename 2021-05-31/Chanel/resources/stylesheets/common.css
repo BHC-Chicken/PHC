@@ -1,0 +1,33 @@
+@import "index.css";
+@import "index.splash.css";
+@import "index.header.css";
+@import "index.search.css";
+@import "index.cs.css";
+@import "index.footer.css";
+
+html {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    /*  font-family: 사용할 폰트(콤마로 구분해서 여러개 사용 가능)
+        - 먼저 적는 것이 우선 순위를 가진다.
+        - 특수한 목적이 아닌 이상 마지막 폰트는 sans-serif 여야 한다.
+        - sans-serif : 시스템 사용자가 설정한 폰트 */
+    font-size: inherit;
+}
+
+input, button {
+    font: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font: inherit;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+body {
+    font-size: 0.85rem;
+    margin: 0;
+    overflow-x: hidden;
+}

@@ -1,0 +1,127 @@
+/*
+Selector : 선택자
+    - 아래 나열할 속성(Property)을 적용할 대상
+
+[선택자] {
+    [속성] : [속성값],
+    [속성] : [속성값],
+    [속성] : [속성값],
+    [속성] : [속성값]
+}
+*/
+
+/* span {
+    color : red;
+    font-size: 100px;
+} */
+
+span.color-red {
+    color: red;
+}
+
+span.size-big {
+
+    font-size:100px;
+}
+
+/*
+ID 선택자
+    - 요소의 id속성값으로 선택한다.
+    - 특수기호 #을 이용함.
+    - 사용 안함. 특히 CSS속성을 주기 위해 요소에 없던 id를 주는건 절대 지양
+
+#ID {
+    ...
+}
+*/
+
+#blue {
+    color: blue;
+}
+
+/*
+CLASS 선택자
+    - 알고있는 Java Class 랑은 무관함.
+    - 요소가 가지는 class 속성 값을 기준으로 선택한다.
+    - class 는 여러개를 이용할 수 있다.
+    - 특수 기호 '.'
+*/
+
+span.color-blue {
+    color:  blue;
+}
+
+span.size-small {
+    font-size: small;
+}
+
+span.font-italic {
+    font-style: italic;
+}
+
+img {
+    /* 가로크기 */
+    width: 800px;
+    /* 세로 크기 */
+    /* height: 500px; */
+    /*
+    - 이미지 요소의 가로/세로 크기를 모두 줄 경우 비율이 깨진다.
+    - 둘 중 하나만 주게 되면 명시한 크기를 지키되 명시하지 않은 크기를
+    비율이 깨지지 않게 자동으로 조정한다.
+    */
+}
+/*
+인접 선택자(a + b)
+    - x 요소 바로 뒤에 오는 y만 해당 함.
+*/
+img+span.desc {
+    font-size: 30px;
+    color: aqua;
+    font-style: italic;
+}
+/*
+형제 선택자 (x ~ y)
+    - x와 동일한 부모를 가지는 요소 y
+    - x보다 밑에(뒤에) 나오면 됨.
+    - 꼭 붙어있을 필요는 없다.
+*/
+
+img~span {
+    text-decoration: underline;
+    /* 텍스트 꾸미기 */
+}
+
+/*
+선택자의 우선 순위
+    0. !important 를 붙인 속성(Property) (최대한 사용 자제)
+    1. 요소의 style 속성(Attribute) 값인 속성(Property)
+    2. 선택자의 복잡도
+    3. 보다 밑에 나오는 선택자
+*/
+
+a.invert {
+    background-color: black;
+    color: wheat;
+    cursor: default;
+    /*마우스 포인터 모양
+    https://developer.mozilla.org/ko/docs/Web/CSS/cursor
+    */
+    transition-duration: 250ms;
+    /* 해당 요소에 상태 변화가 일어 날때 중복되는  속성이 변화하는데에 걸리게 할 시간 (단위 ms/s) */
+    user-select: none;
+    /* user-select: 사용자가 텍스트를 선택할 수 있는지 선택
+        -none : 불가
+        -all : 가능
+    */
+}
+
+/* 가상 클래스 : 요소의 상태에 따른 선택 */
+a.invert:hover {
+    /*hover : 마우스 올렸을 때*/
+    background-color: red;
+}
+
+a.invert:active {
+    /*마우스 눌렀을때*/
+    background-color: orange;
+}

@@ -1,0 +1,62 @@
+body>section.cs {
+    background-color: #ffffff;
+    margin-bottom: 100vh;
+}
+
+body>section.cs>div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    padding: 4rem;
+}
+
+body>section.cs>div>div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body>section.cs>div>div>h2 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+body>section.cs>div>div>span {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+body>section.cs>div>div>ul {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+body>section.cs>div>div>ul>li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+
+body>section.cs>div>div>ul>li:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+body>section.cs>div>div>ul>li>img {
+    width: 1rem;
+    margin-left: 0.25rem;
+    transition-duration: 250ms;
+}
+
+body>section.cs>div>div>ul>li:hover>img {
+    transform: translateX(0.75rem);
+}

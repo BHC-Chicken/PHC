@@ -1,0 +1,37 @@
+.container {
+    margin-top: 50px;
+}
+
+body > div.container > a.button {
+    background-color: rgb(220, 220, 220);
+    cursor: pointer;
+    user-select: none;
+    padding: 5px;
+    /* padding : 내부 여백, (별도의 조치를 취하지 않았을 때) padding 값은 요소 크기에 영향을 미친다.
+        - [x] : 위, 아래, 좌, 우 전부 x만큼
+        - [x] [y] : 위, 아래  : x | 좌, 우 :y
+        - [a] [b] [c] [d] : 상, 우, 하, 좌
+        */
+
+    margin-right: 5px;
+    border: 3px solid lightblue;
+    /* border: [굵기] [스타일] [색상] */
+}
+
+body > div.container > a.button:hover {
+    border: 1px solid dodgerblue;
+}
+
+body > div.container > a.button:active {
+    background-color: wheat;
+}
+
+/* first-child : 첫번째 요소 = nth-child(1)
+    last-child : 마지막 요소
+    nth-child(even) : 짝수번째 요소
+    nth-chile(odd) : 홀수번째 요소
+    not(:조건) : 부정 */
+
+body > div.container > a.button:not(:last-child) {
+    margin-right: 10px;
+}

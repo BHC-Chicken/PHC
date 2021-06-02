@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS : Element</title>
+    <script>
+        // 함수(function)
+        /*
+        function [함수 이름]([매개변수 구조]) {
+            [구현부]
+        */
+        function sum(a, b) {
+            return a + b;
+        }
+
+        let subtract = (a, b)=>{return a-b};
+
+        // 화살표 함수에서 첫 구문이 return 이라면 아래와 같이 생략할 수 있다.
+        let multi=(a,b) => a*b;
+        // 이벤트(Event) : 사건(~했을 때, 클릭했을 때, 마우스 올렸을때, 마우스 뺐을때 등등등... )
+        // [이벤트 붙일 요소(대상)].addEventListener([이벤트 이름],[함수]);
+        // DOMContentLoaded (대소문자 구분) : window 의 이벤트, </html>를 만났을때, 즉, HTML 문서 구조를 파악했을 때
+        let domContentLoadedEventHandler = () => {
+            console.log('DOMContentLoaded 발생함');
+            window.document.body.innerText='Hello, World!';
+        }
+        window.addEventListener('DOMContentLoaded', domContentLoadedEventHandler);
+
+        let g=() => {
+            console.log('load 발생항');
+        };
+        // 익명함수(Anonymous Function) : 이름 없는 함수, 일회용인 경우가 많다.
+        window.addEventListener('load', ()=>{console.log('load 발생')}
+        );
+        // load (대소문자 구분) : HTML 문서 내의 img 등의 리소스를 모두 다운로드 받은 후(페이지가 준비되었을 때)
+        // window.document.body.innerText='Hello, World!';
+    </script>
+</head>
+<body>
+</body>
+</html>

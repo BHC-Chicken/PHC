@@ -1,0 +1,22 @@
+span.grand {
+    font-size: 50px;
+}
+
+/*후손 선택자
+    - "x y" : x에 의해 선택된 요소 보다 하위에 있는 y
+*/
+
+body div {
+    background-color: gray;
+}
+span.grand+div span{
+    color: red;
+}
+
+/* 자식 선택자
+    - "x > y" : x에 의해 선택된 요소의 바로 아랫단계에 있는 y
+ */
+
+span.grand + div > span {
+    background-color: purple;
+}

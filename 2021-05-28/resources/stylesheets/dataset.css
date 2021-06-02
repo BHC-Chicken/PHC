@@ -1,0 +1,7 @@
+body>ul>li {
+    cursor: pointer;
+}
+
+body>ul>li:hover {
+    text-decoration-line: underline;
+}
