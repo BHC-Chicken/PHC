@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+body>main {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FEC146;
+    background: -webkit-linear-gradient(top left, #FEC146, #6798F1);
+    background: -moz-linear-gradient(top left, #FEC146, #6798F1);
+    background: linear-gradient(to bottom right, #FEC146, #6798F1);
+    perspective: 100vw;
+    position: fixed;
+}
+
+body>main>table {
+    top: 50%;
+    left: 50%;
+    width: 80vh;
+    height: 80vh;
+    background-color: lightseagreen;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-style: hidden;
+}
+
+body>main>table>tbody>tr>td {
+    border: 0.0625rem solid lightyellow;
+    cursor: pointer;
+    transition-duration: 250ms;
+}
+
+body>main>table>tbody>tr>td:hover {
+    backdrop-filter: brightness(1.25);
+}
+
+body>main>table>tbody>tr>td>img {
+    left: 50%;
+    width: 50%;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-50%) scale(1.5);
+    transition-duration: 250ms;
+}
+
+body>main>table>tbody>tr>td>img.visible {
+    opacity: 1;
+    transform: translateX(-50%);
+}
