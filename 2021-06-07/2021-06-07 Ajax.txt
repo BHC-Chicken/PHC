@@ -1,0 +1,57 @@
+JSON이란?
+데이터를 담기 위한 포맷
+
+1. JSON Object : 키-값(Key-Value Pair) 쌍의 나열, 데이터 접근은 키(key)로
+{
+	"pi":3.14
+	"nums" : [1,2,3,4,5]
+}
+["pi"] => 3.14
+["nums"] => [1,2,3,4,5]
+["nums"][1] => 2
+
+※인덱스 번호로 접근 불가
+
+2. JSON Array : 단순 값의 나열, 데이터 접근은 인덱스 번호로
+["김이박", 123, "abcdefg", "가나다라", true ]
+[0] => "김이박"
+[1] => 123
+[4] => true
+
+----------------------------------------------------------------------------------------------
+데이터 요청의 구서 요소
+ - 방식 (Method)
+ - 주소 (URL)
+ - [Optional] 데이터 (Data)
+
+http://worldtimeapi.org/api/timezone/Asia/Seoul
+
+주소창에 naver.com를 치면
+방식 : GET
+주소 : https://www.naver.com/
+
+HTTP 요청 방식 (Method)
+
+GET	: 데이터가 주소창에 노출(검색) + 길이가 짧은 데이터 용
+		- 주소창에 주소 적고 엔터치는 행위
+		- "method" 속성을 명시하지 않은 "form" 요소의 요청 방식
+
+POST	: 데이터가 주소창에 노출되지 않음. + 길이가 긴 데이터 용(업로드)
+
+/login
+<form method="post"> </form> // default 값은 GET
+
+@GetMapping("/login")
+public String loginGet() {
+	// 로그인 페이지인 JSP 돌려주기
+	
+}
+
+@PostMapping("/login")
+public String loginPost() {
+	// 실제 로그인 처리
+}
+
+Restful 방식 : 주소는 동일하게, 방식(Method)을 달리하여 여러 처리를 하는 것.
+RestApi 방식 : Ajax(XHR) 요청
+SPA(Single Page Application)
