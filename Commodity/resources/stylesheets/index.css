@@ -1,0 +1,15 @@
+:root {
+    --default-back-color : #f0f5fa;
+    --default-text-color : #10151a;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color: var(--default-back-color);
+    color: var(--default-text-color);
+    display: flex;
+    flex-direction: row;
+}

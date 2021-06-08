@@ -1,0 +1,56 @@
+body>main {
+    flex : 1;
+    padding: 1.5rem;
+}
+
+body>main>*:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+body>main>section {
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+body>main>section.summary>h1 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+body>main>section.summary>h1>img {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: var(--default-back-color);
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+body>main>section.summary>h1>span {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body>main>section.summary>h1>span>span {
+    line-height: 100%;
+}
+
+body>main>section.summary>h1>span>span.eng {
+    color: #80858a;
+}
+
+body>main>section.summary>h1>span>span.kor {
+    margin-top: 0.25rem;
+    font-size: 2.25rem;
+}
+
+body>main>section.data {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

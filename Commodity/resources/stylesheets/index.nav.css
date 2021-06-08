@@ -1,0 +1,42 @@
+body>nav {
+    background-color: #ffffff;
+}
+
+body>nav>ul {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.5rem;
+}
+
+body>nav>ul>li {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-drag: none;
+}
+
+body>nav>ul>li:hover {
+    background-color: var(--default-back-color);
+}
+
+body>nav>ul>li:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+body>nav>ul>li.selected {
+    background-color: var(--default-back-color);
+    cursor: default;
+}
+
+body>nav>ul>li>img {
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+}

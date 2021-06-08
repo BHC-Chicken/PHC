@@ -1,0 +1,20 @@
+GET https://www.quandl.com/api/v3/datasets/{database_code}/{dataset_code}/data.{return_format}
+
+quandl api key : Sw9gwWxWJqxr-kXoKmss
+양식 : https://www.quandl.com/api/v3/datasets/WIKI/FB/data.json?api_key=YOURAPIKEY
+https://www.quandl.com/api/v3/datasets/CHRIS/CME_CL1.json?api_key=Sw9gwWxWJqxr-kXoKmss&order=asc&start_date=2000-01-01
+https://docs.quandl.com/docs/parameters-2
+
+
+주소상에 ?가 시작되면 거시 부터는 주소가 아니라 (GET) 데이터
+각 데이터는 <키>=<값> '쌍'으로 이루어져 있고 '쌍'들의 구분은 &(앰퍼센트 Ampersand)로 한다.
+
+전 : /login.html
+<form>
+	<input type="email" name="email">
+	<input type="password" name="password">
+	<input type="submit" name="로그인">
+</form>
+후 : /login.html?email=admin&password=test1234
+
+json['dataset']['data'][0][0]
