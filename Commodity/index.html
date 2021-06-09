@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="resources/stylesheets/common.css">
     <script defer src="resources/scripts/class.data.js"></script>
+    <script defer src="resources/scripts/class.data.gold.js"></script>
     <script defer src="resources/scripts/class.ajax.js"></script>
     <script defer src="resources/scripts/index.js"></script>
     <title>원자재 가격 정보</title>
 </head>
 <body>
+<div class="cover">
+    <div class="loading"></div>
+</div>
     <nav>
         <ul>
             <li class="selected">
                 <img alt="원유" src="resources/images/nav.menu.oil.png">
+            </li>
+            <li class="selected">
+                <img alt="금" src="resources/images/nav.menu.gold.png">
             </li>
         </ul>
     </nav>
@@ -27,7 +34,7 @@
             </h1>
         </section>
         <section class="data">
-            <table>
+            <table id="data-table">
                 <thead>
                     <tr>
                         <th data-index="0">날짜</th>
@@ -39,6 +46,30 @@
                     </tr>
                 </thead>
                 <tbody></tbody>
+            </table>
+        </section>
+        <section class="summary">
+            <h1>
+                <img alt="금" src="resources/images/nav.menu.gold.png">
+                <span>
+                    <span class="eng">Gold</span>
+                    <span class="kor">금</span>
+                </span>
+            </h1>
+        </section>
+        <section class="data gold">
+            <table id="gold">
+                <thead>
+                <tr>
+                    <th data-index="0">날짜</th>
+                    <th data-index="1">시가</th>
+                    <th data-index="2">고가</th>
+                    <th data-index="3">저가</th>
+                    <th data-index="4">종가</th>
+                    <th data-index="7">거래량</th>
+                </tr>
+                </thead>
+                <tbody class="gold"></tbody>
             </table>
         </section>
     </main>

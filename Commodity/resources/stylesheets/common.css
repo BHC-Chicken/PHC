@@ -2,6 +2,7 @@
 @import "index.css";
 @import "index.main.css";
 @import "index.nav.css";
+@import "index.cover.css";
 
 html {
     font-family: 'Noto Sans KR', sans-serif;
