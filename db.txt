@@ -1,0 +1,22 @@
+C : create EX) 회원가입, 글 쓰기, 댓글 쓰기.....
+R : read EX) 로그인, 글 읽기, 댓글 읽기 
+U : update EX) 회원정보 수정, 글 수정, 댓글 수정
+D : delete EX) 탈퇴, 글 삭제, 댓글 삭제
+
+MariaDB(user)
+
+{id}@{remote Host} => 나한테 요청을 보낸 사람, 로그인을 한 기기
+
+태초에 생기는 계정
+root@localhost
+
+Integrity (무결성)
+Constraint(제약 조건)
+
+테이블 이름은 복수로 EX)logs, users...
+
+<users>
+index, email, password, name
+
+비밀번호 암호화
+hashing(단방향 암호화) : 한번 암호화 하면 복호화 불가
